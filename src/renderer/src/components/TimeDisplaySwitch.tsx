@@ -1,10 +1,10 @@
 import Switch from '@mui/material/Switch'
 import FormControlLabel from '@mui/material/FormControlLabel'
 import { useAtom } from 'jotai'
-import { displayTieAtom } from '../atom'
+import { displayTimeAtom } from '../atom'
 
-const TieDisplaySwitch = (): JSX.Element => {
-  const [view, setView] = useAtom(displayTieAtom) // eslint-disable-line @typescript-eslint/no-unused-vars
+const TimeDisplaySwitch = (): JSX.Element => {
+  const [view, setView] = useAtom(displayTimeAtom)
 
   const handleToggle = (): void => {
     setView((prev) => !prev)
@@ -13,10 +13,10 @@ const TieDisplaySwitch = (): JSX.Element => {
   return (
     <FormControlLabel
       control={<Switch checked={view} onChange={handleToggle} />}
-      label="Show Tie"
+      label="Show Time"
       sx={{ alignSelf: 'flex-end', m: 2 }}
     />
   )
 }
 
-export default TieDisplaySwitch
+export default TimeDisplaySwitch

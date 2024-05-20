@@ -24,7 +24,7 @@ const Display7dayFromPickedDate = (): JSX.Element => {
   return (
     <Box display="flex" gap="10px">
       {dates.map((date, index) => (
-        <Box key={index} border={1} borderColor="grey.500" borderRadius="borderRadius" p={1}>
+        <Box key={index}>
           {/* 日付はここでローカライズしてstr */}
           {date.toLocaleDateString('ja-JP', {
             year: 'numeric',
