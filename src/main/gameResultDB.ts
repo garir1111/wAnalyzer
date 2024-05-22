@@ -93,7 +93,7 @@ class gameResultDB {
           }
 
           if (!rows || rows.length === 0) {
-            resolve('No Game')
+            resolve('No Game...')
             return
           }
           resolve(rows)
